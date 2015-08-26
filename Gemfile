@@ -7,6 +7,9 @@ gem 'rails', '3.2.16'
 
 gem 'sqlite3'
 
+# API building tools:
+gem 'rocket_pants', '~> 1.9.2'
+
 # To use ActiveModel has_secure_password:
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
