@@ -11,6 +11,7 @@ gem 'sqlite3'
 gem 'rocket_pants', '~> 1.9.2'
 
 # User authentication:
+gem 'figaro'
 gem 'omniauth-venmo'
 
 # To use ActiveModel has_secure_password:
