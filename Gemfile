@@ -10,6 +10,9 @@ gem 'sqlite3'
 # API building tools:
 gem 'rocket_pants', '~> 1.9.2'
 
+# User authentication:
+gem 'omniauth-venmo'
+
 # To use ActiveModel has_secure_password:
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
