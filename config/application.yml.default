@@ -1,0 +1,6 @@
+venmo_public_key: "Venmo public key goes here."
+venmo_private_key: "Venmo private key goes here."
+
+production:
+  venmo_public_key: "Venmo public key goes here."
+  venmo_private_key: "Venmo private key goes here."
