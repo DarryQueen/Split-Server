@@ -1,4 +1,11 @@
 SplitServer::Application.routes.draw do
+  namespace :api do
+    api :version => 1, :module => 'v1' do
+    end
+  end
+
+  match '/auth/:provider/callback', :to => 'sessions#create'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
