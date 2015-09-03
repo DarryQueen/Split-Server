@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150901200940) do
+ActiveRecord::Schema.define(:version => 20150902194325) do
 
   create_table "identities", :force => true do |t|
     t.integer  "user_id"
@@ -22,6 +22,35 @@ ActiveRecord::Schema.define(:version => 20150901200940) do
   end
 
   add_index "identities", ["user_id"], :name => "index_identities_on_user_id"
+
+  create_table "items", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "meal_id"
+    t.string   "name"
+    t.float    "price"
+    t.string   "picture_url"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "meals", :force => true do |t|
+    t.string   "name"
+    t.float    "tip"
+    t.float    "tax"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "picture_url"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "memberships", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "meal_id"
+    t.string   "role",       :default => "participant"
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                :default => "", :null => false
