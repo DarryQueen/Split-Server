@@ -3,7 +3,7 @@ class CreateMemberships < ActiveRecord::Migration
     create_table :memberships do |t|
       t.references :user
       t.references :meal
-      t.string :role, default: 'participant'
+      t.string :role
 
       t.timestamps
     end

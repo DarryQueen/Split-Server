@@ -3,7 +3,7 @@ class CreateItems < ActiveRecord::Migration
     create_table :items do |t|
       t.references :meal
       t.string :name
-      t.float :price
+      t.integer :price
 
       t.timestamps
     end
