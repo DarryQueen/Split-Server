@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
   attr_accessible :email, :name, :authentication_token
+  has_many :memberships
+  has_many :meals, :through => :memberships
 
   def generate_authentication_token
     while self.authentication_token.nil? or self.class.exists?(:authentication_token => authentication_token)
